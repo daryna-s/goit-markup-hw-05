@@ -286,10 +286,30 @@ address {
     display: flex;
 }
 .work-item {
+    position: relative;
     margin-right: 30px;
 }
 .work-item:last-child {
     margin-right: 0;
+}
+.product {
+    font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    
+        color: var(--next2-txt-cl);
+        background-color: rgba(47, 48, 58, 0.8);
+    
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+width: 100%;
+        
 }
 
 /* команда */
@@ -412,12 +432,15 @@ address {
     padding: 16px 32px;
     color: var(--main-txt-cl);
 }
-.customer-item:hover {
+.customer-item:hover,
+.customer-item:focus {
     border-color: var(--accent-txt-cl);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link:hover .customer-icon,
 .customer-link:focus .customer-icon {
     fill: var(--accent-txt-cl);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-item:last-child {
     margin-right: 0;
@@ -586,7 +609,40 @@ address {
 }
 .work-link {
     display: block;
+    text-decoration: none;
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.work-link:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.img-over {
+    position: relative;
+    overflow: hidden;
+}
+.cont-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.text-overlay {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding: 0;
+
+    color: var(--next2-txt-cl);
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .header-example {
     font-weight: 700;
     font-size: 18px;
@@ -610,6 +666,7 @@ address {
     
     margin-right: 30px;
     margin-bottom: 30px;
+    position: relative;
 }
 .work-name{
     padding: 20px 24px 20px 24px;
@@ -626,11 +683,7 @@ address {
 .work-examples-list {
     flex-basis: calc((100% - 30px) / 3);
 }
-.work-link:hover,
-.work-link:focus {
-    cursor: pointer;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+
 
 
 
