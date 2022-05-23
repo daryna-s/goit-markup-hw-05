@@ -253,11 +253,15 @@ address {
 }
 .modal-btn {
     display: flex;
-margin-left: auto;
-width: 30px;
-height: 30px;
-border-radius: 50%;
-border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--main-bg-cl);
+    cursor: pointer;
 }
 /* особенности */
 
